@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zuche:jdk-tools:1.6.0.43">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/jdk-tools/1.6.0.43/jdk-tools-1.6.0.43.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/jdk-tools/1.6.0.43/jdk-tools-1.6.0.43-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/jdk-tools/1.6.0.43/jdk-tools-1.6.0.43-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

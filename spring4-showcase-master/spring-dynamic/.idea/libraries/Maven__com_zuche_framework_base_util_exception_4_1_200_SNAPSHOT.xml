@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zuche.framework:base-util-exception:4.1.200-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-exception/4.1.200-SNAPSHOT/base-util-exception-4.1.200-20190704.060844-719.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-exception/4.1.200-SNAPSHOT/base-util-exception-4.1.200-20190704.060844-719-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-exception/4.1.200-SNAPSHOT/base-util-exception-4.1.200-20190704.060844-719-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

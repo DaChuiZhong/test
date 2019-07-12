@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zuche.logagent:base-agent-log:logAgentJar:4.0.600-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/logagent/base-agent-log/4.0.600-SNAPSHOT/base-agent-log-4.0.600-20190423.083711-53-logAgentJar.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/logagent/base-agent-log/4.0.600-SNAPSHOT/base-agent-log-4.0.600-20190423.083711-53-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/logagent/base-agent-log/4.0.600-SNAPSHOT/base-agent-log-4.0.600-20190423.083711-53-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

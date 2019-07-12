@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zuche.framework:base-util-common:4.1.200-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-common/4.1.200-SNAPSHOT/base-util-common-4.1.200-20190704.060856-703.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-common/4.1.200-SNAPSHOT/base-util-common-4.1.200-20190704.060856-703-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zuche/framework/base-util-common/4.1.200-SNAPSHOT/base-util-common-4.1.200-20190704.060856-703-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

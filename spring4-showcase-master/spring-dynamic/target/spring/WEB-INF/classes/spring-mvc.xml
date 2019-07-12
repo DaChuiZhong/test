@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <context:component-scan base-package="com.sishuok.spring.controller"/>
+
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <bean id="dynamicDeployBeans" class="com.sishuok.spring.dynamic.DynamicDeployBeans">
+        <constructor-arg value="500"/>
+    </bean>
+
+    <bean id="dynamicDeployBeans2" class="com.sishuok.spring.dynamic.DynamicDeployBeans2">
+        <property name="refreshCheckDelay" value="500"/>
+    </bean>
+
+    <context:component-scan base-package="com">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <bean id="propertyConfigurer" class="com.sishuok.spring.Jdbc.CustomizedPropertyConfigurer" lazy-init="false">
+        <property name="locations">
+            <list>
+                <value>classpath*:*.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="url">
+            <value>${jdbc.url}</value>
+        </property>
+        <property name="username">
+            <value>${jdbc.username}</value>
+        </property>
+        <property name="password">
+            <value>${jdbc.password}</value>
+        </property>
+        <property name="initialSize">
+            <value>${jdbc.initialSize}</value>
+        </property>
+        <property name="maxActive">
+            <value>${jdbc.maxActive}</value>
+        </property>
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="minIdle" value="1"/>
+        <property name="maxWait" value="60000"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath*:dao/*.xml"/>
+    </bean>
+
+<!--    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+<!--        <property name="mapperInterface" value="dao.TestDao" />-->
+<!--        <property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
+<!--    </bean>-->
+
+    <!--4 自动扫描对象关系映射 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定会话工厂，如果当前上下文中只定义了一个则该属性可省去 -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!-- 指定要自动扫描接口的基础包，实现接口 -->
+        <property name="basePackage" value="dao"/>
+    </bean>
+
+    <!-- MyBatis sqlSessionFactory 配置 mybatis-->
+<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="configLocation" value="classpath:/com/pingpeng/misp/models/mybatis/SqlMapConfig.xml" />-->
+<!--        <property name="dataSource" ref="dataSource" />-->
+<!--    </bean>-->
+<!--    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">-->
+<!--        <constructor-arg index="0" ref="sqlSessionFactory" />-->
+<!--    </bean>-->
+    <bean id="sqlSessionCache" class="MybatisReGenXin.SqlSessionCache" init-method="refreshMapper">
+        <!-- 扫描的映射mapper.xml的文件路径-->
+        <property name="packageSearchPath" value="classpath*:dao/*.xml"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+
+</beans>

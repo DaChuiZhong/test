@@ -191,7 +191,7 @@
         <asm.version>4.0</asm.version>
         <cglib.version>3.0</cglib.version>
 
-        <jackson-2-version>2.2.3</jackson-2-version>
+        <jackson-2-version>2.11.0</jackson-2-version>
 
         <jetty.version>8.1.8.v20121106</jetty.version>
 

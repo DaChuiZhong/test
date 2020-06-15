@@ -197,7 +197,7 @@
 
         <junit.version>4.11</junit.version>
 
-        <hibernate.validator.version>5.0.2.Final</hibernate.validator.version>
+        <hibernate.validator.version>5.3.5.Final</hibernate.validator.version>
     </properties>
 
 

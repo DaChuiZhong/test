@@ -214,7 +214,7 @@
         <junit.version>4.11</junit.version>
         <mockito.core.version>1.9.5</mockito.core.version>
 
-        <hibernate.validator.version>5.0.2.Final</hibernate.validator.version>
+        <hibernate.validator.version>5.3.5.Final</hibernate.validator.version>
 
         <groovy.version>2.2.1</groovy.version>
     </properties>

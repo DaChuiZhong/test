@@ -197,7 +197,7 @@
         <hamcrest.version>1.3</hamcrest.version>
         <mockito.core.version>1.9.5</mockito.core.version>
         <jsonpath.version>0.9.0</jsonpath.version>
-        <xstream.version>1.4.4</xstream.version>
+        <xstream.version>1.4.16</xstream.version>
 
         <hibernate.validator.version>5.0.2.Final</hibernate.validator.version>
     </properties>

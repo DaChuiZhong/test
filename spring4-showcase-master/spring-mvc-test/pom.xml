@@ -188,7 +188,7 @@
         <asm.version>4.0</asm.version>
         <cglib.version>3.0</cglib.version>
 
-        <jackson2.version>2.2.3</jackson2.version>
+        <jackson2.version>2.9.10.8</jackson2.version>
 
         <jetty.version>8.1.8.v20121106</jetty.version>
         <spring.boot.version>0.5.0.BUILD-SNAPSHOT</spring.boot.version>
